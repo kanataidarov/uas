@@ -1,7 +1,6 @@
 package kz.kaznu.nmm.aglomer.config;
 
 import org.springframework.beans.factory.BeanInitializationException;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -14,8 +13,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.data.repository.query.SecurityEvaluationContextExtension;
 
+import javax.annotation.PostConstruct;
+
 @Configuration
-public class UaaWebSecurityConfiguration extends WebSecurityConfigurerAdapter implements InitializingBean {
+public class UaaWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
 
@@ -26,8 +27,8 @@ public class UaaWebSecurityConfiguration extends WebSecurityConfigurerAdapter im
         this.authenticationManagerBuilder = authenticationManagerBuilder;
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
+    @PostConstruct
+    public void init() throws Exception {
         try {
             authenticationManagerBuilder
                 .userDetailsService(userDetailsService)
