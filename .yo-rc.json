@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "kz.kaznu.nmm.aglomer",
+      "nativeLanguage": "ru"
+    },
+    "jhipsterVersion": "6.6.0",
+    "applicationType": "uaa",
+    "baseName": "uas",
+    "packageName": "kz.kaznu.nmm.aglomer",
+    "packageFolder": "kz/kaznu/nmm/aglomer",
+    "serverPort": "12101",
+    "authenticationType": "uaa",
+    "cacheProvider": "redis",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MzNjOTI1NDVkYjlhMDg5N2U1NjA1YTgzNzU4ZTYxY2EwNzdkNTNjM2I0YWJiODIzYmMwNzBkYWJmMTRjMmYwY2FkYWJhN2MwYWVlZWQ0YWQ0M2E3NTM1M2VkN2IxZjQzMGUyMzcxOTgzNmIxY2IzNWFiZmEyZDNlODZhMDUzYTU=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1582264193084,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "ru",
+    "languages": ["ru"],
+    "blueprints": [],
+    "skipClient": true
+  }
+}
