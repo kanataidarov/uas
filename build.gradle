@@ -286,6 +286,12 @@ dependencies {
     testImplementation "com.h2database:h2"
     liquibaseRuntime "com.h2database:h2"
     //jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
+    def junitJupiterVersion = '5.4.2'
+    testCompile "org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion"
+    testCompile "org.junit.jupiter:junit-jupiter-params:$junitJupiterVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion"
+    testCompile "org.testcontainers:testcontainers:1.12.5"
+    testCompile "org.testcontainers:junit-jupiter:1.12.5"
 }
 
 if (project.hasProperty("gae")) {
