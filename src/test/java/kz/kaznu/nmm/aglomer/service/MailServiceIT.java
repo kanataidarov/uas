@@ -2,13 +2,11 @@ package kz.kaznu.nmm.aglomer.service;
 
 import kz.kaznu.nmm.aglomer.config.Constants;
 
-import kz.kaznu.nmm.aglomer.RedisTestContainerExtension;
 import kz.kaznu.nmm.aglomer.UasApp;
 import kz.kaznu.nmm.aglomer.domain.User;
 import io.github.jhipster.config.JHipsterProperties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.MockitoAnnotations;
@@ -43,7 +41,6 @@ import static org.mockito.Mockito.*;
  * Integration tests for {@link MailService}.
  */
 @SpringBootTest(classes = UasApp.class)
-@ExtendWith(RedisTestContainerExtension.class)
 public class MailServiceIT {
 
     private static final String[] languages = {

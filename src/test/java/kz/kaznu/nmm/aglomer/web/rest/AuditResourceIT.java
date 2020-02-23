@@ -1,7 +1,6 @@
 package kz.kaznu.nmm.aglomer.web.rest;
 
 import kz.kaznu.nmm.aglomer.UasApp;
-import kz.kaznu.nmm.aglomer.RedisTestContainerExtension;
 import io.github.jhipster.config.JHipsterProperties;
 import kz.kaznu.nmm.aglomer.config.audit.AuditEventConverter;
 import kz.kaznu.nmm.aglomer.domain.PersistentAuditEvent;
@@ -11,7 +10,6 @@ import kz.kaznu.nmm.aglomer.security.AuthoritiesConstants;
 import kz.kaznu.nmm.aglomer.service.AuditEventService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -39,7 +37,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
 @SpringBootTest(classes = UasApp.class)
-@ExtendWith(RedisTestContainerExtension.class)
 @Transactional
 public class AuditResourceIT {
 
