@@ -60,7 +60,7 @@ sonar-analyze:
         - merge_requests
     dependencies:
         - gradle-test
-        - gradle-integration-test
+        # - gradle-integration-test
     script:
         - ./gradlew sonarqube --no-daemon -Dsonar.organization=aglomer -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=d7473bd09d22bc626a9c67fab78c326426e21753
     allow_failure: true
