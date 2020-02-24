@@ -1,5 +1,6 @@
 package kz.kaznu.nmm.aglomer.web.rest;
 
+import kz.kaznu.nmm.aglomer.RedisTestContainerExtension;
 import kz.kaznu.nmm.aglomer.UasApp;
 import kz.kaznu.nmm.aglomer.domain.Authority;
 import kz.kaznu.nmm.aglomer.domain.User;
@@ -12,6 +13,7 @@ import kz.kaznu.nmm.aglomer.web.rest.vm.ManagedUserVM;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -38,6 +40,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
 @SpringBootTest(classes = UasApp.class)
+@ExtendWith(RedisTestContainerExtension.class)
 public class UserResourceIT {
 
     private static final String DEFAULT_LOGIN = "johndoe";

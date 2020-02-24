@@ -109,7 +109,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: YjMwZDBlMGY4ZjY5Mjc0MzQyNjJkNGU5ZjgzNjE3YWY4NjRkYzdlMjVkMWFlNWZlOTQ5OGJiMDg1OWYyYjUxZTg0M2ZlNjE5NDMxNGZlZWFjMDQ2ZTE5ZTAzMTZkMTIwYmU5MDg4NDFiZDlhNjljOTE5NDIwY2MyMzk0NDM4NWY=
+        base64-secret: ZmI3NzFlM2IzZTU1NTdhYWE0Yjg3MTVlZmZiMzg5ZGQ5ODRkNDdmZWYzNGM3YTE3YmM3YmM0MTU1YWU1ZTUxZDBlY2U3NjE5MDkyYmI3ZTU4NjNkYjRmNmVjYzg0MzE2Yjk4MDJmZTMxOGY1OTZkMDA3OThjOThjMmI3MmZiZmQ=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
     client-authorization:
@@ -119,6 +119,9 @@ jhipster:
     logs: # Reports metrics in the logs
       enabled: true
       report-frequency: 60 # in seconds
+  cache:
+    redis:
+      server: ${redis.test.server}
 kafka:
   bootstrap-servers: localhost:9092
   consumer:

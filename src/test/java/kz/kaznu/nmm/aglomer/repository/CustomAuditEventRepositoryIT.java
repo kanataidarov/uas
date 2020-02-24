@@ -1,11 +1,13 @@
 package kz.kaznu.nmm.aglomer.repository;
 
 import kz.kaznu.nmm.aglomer.UasApp;
+import kz.kaznu.nmm.aglomer.RedisTestContainerExtension;
 import kz.kaznu.nmm.aglomer.config.Constants;
 import kz.kaznu.nmm.aglomer.config.audit.AuditEventConverter;
 import kz.kaznu.nmm.aglomer.domain.PersistentAuditEvent;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -28,6 +30,7 @@ import static kz.kaznu.nmm.aglomer.repository.CustomAuditEventRepository.EVENT_D
  * Integration tests for {@link CustomAuditEventRepository}.
  */
 @SpringBootTest(classes = UasApp.class)
+@ExtendWith(RedisTestContainerExtension.class)
 @Transactional
 public class CustomAuditEventRepositoryIT {
 

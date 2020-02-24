@@ -9,6 +9,7 @@ services:
       - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka
       - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config
       - SPRING_DATASOURCE_URL=jdbc:postgresql://uas-postgresql:5432/uas
+      - JHIPSTER_CACHE_REDIS_SERVER=redis://uas-redis:6379
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
       - SPRING_DATA_JEST_URI=http://uas-elasticsearch:9200
       - SPRING_ELASTICSEARCH_REST_URIS=http://uas-elasticsearch:9200
@@ -17,6 +18,10 @@ services:
     extends:
       file: postgresql.yml
       service: uas-postgresql
+  uas-redis:
+    extends:
+      file: redis.yml
+      service: uas-redis
   uas-elasticsearch:
     extends:
       file: elasticsearch.yml

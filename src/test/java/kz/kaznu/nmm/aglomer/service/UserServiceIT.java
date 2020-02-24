@@ -1,5 +1,6 @@
 package kz.kaznu.nmm.aglomer.service;
 
+import kz.kaznu.nmm.aglomer.RedisTestContainerExtension;
 import kz.kaznu.nmm.aglomer.UasApp;
 import kz.kaznu.nmm.aglomer.config.Constants;
 import kz.kaznu.nmm.aglomer.domain.User;
@@ -12,6 +13,7 @@ import io.github.jhipster.security.RandomUtil;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -37,6 +39,7 @@ import static org.mockito.Mockito.when;
  * Integration tests for {@link UserService}.
  */
 @SpringBootTest(classes = UasApp.class)
+@ExtendWith(RedisTestContainerExtension.class)
 @Transactional
 public class UserServiceIT {
 
