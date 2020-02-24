@@ -311,3 +311,9 @@ wrapper {
 
 compileJava.dependsOn processResources
 processResources.dependsOn bootBuildInfo
+
+jacocoTestReport {
+    reports {
+        xml.enabled true 
+    }
+}
