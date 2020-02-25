@@ -2,6 +2,8 @@
 
 This is a User Authorization Service (UAS) - application intended to be part of a microservice architecture. 
 
+Gateway Service - application intended to be part of a microservice architecture.
+
 The application has following features: 
 * It is based on JHipster UAA - a user accounting and authorizing service for securing microservices.
 * It uses JSON Web Token ([JWT](https://jwt.io/introduction/)) authorization protocol.
