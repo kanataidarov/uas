@@ -2,7 +2,7 @@
 
 This is a User Authorization Service (UAS) - application intended to be part of a microservice architecture. 
 
-Gateway Service - application intended to be part of a microservice architecture.
+Part of [Aglomer](https://github.com/users/kanataidarov/projects/1) project. 
 
 The application has following features: 
 * It is based on JHipster UAA - a user accounting and authorizing service for securing microservices.
